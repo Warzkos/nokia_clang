@@ -1,0 +1,3 @@
+/home/warzkos/Documents/nokia_clang/build/CMakeFiles/rebuild_cache.dir
+/home/warzkos/Documents/nokia_clang/build/CMakeFiles/edit_cache.dir
+/home/warzkos/Documents/nokia_clang/build/CMakeFiles/nokia_clang.dir

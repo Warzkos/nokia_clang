@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/warzkos/Documents/nokia_clang/build",
+  "command": "/usr/bin/clang++      -std=gnu++2a -o CMakeFiles/nokia_clang.dir/sys_op.cpp.o -c /home/warzkos/Documents/nokia_clang/sys_op.cpp",
+  "file": "/home/warzkos/Documents/nokia_clang/sys_op.cpp"
+}
+]

@@ -1,0 +1,1390 @@
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:1:1: warning: #includes are not sorted properly [llvm-include-order]
+#include <iostream>
+^        ~~~~~~~~~~
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:1:10: note: FIX-IT applied suggested code changes
+#include <iostream>
+         ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:2:10: note: FIX-IT applied suggested code changes
+#include <vector> //dynamiczna tablica
+         ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:4:10: note: FIX-IT applied suggested code changes
+#include <cstdlib> //funkcja exit()
+         ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:7:10: note: FIX-IT applied suggested code changes
+#include <ctime>
+         ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:5:10: warning: inclusion of deprecated C++ header 'stdio.h'; consider using 'cstdio' instead [hicpp-deprecated-headers]
+#include <stdio.h>
+         ^
+note: this fix will not be applied because it overlaps with another fix
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:5:10: warning: inclusion of deprecated C++ header 'stdio.h'; consider using 'cstdio' instead [modernize-deprecated-headers]
+note: this fix will not be applied because it overlaps with another fix
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:9:1: warning: do not use namespace using-directives; use using-declarations instead [google-build-using-namespace]
+using namespace std;
+^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:11:8: warning: constructor does not initialize these fields: czas_przybycia, czas_na_procesorze, pozostaly_czas_na_procesorze, response_ratio, czas_zakonczenia [cppcoreguidelines-pro-type-member-init]
+struct proces{
+       ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:13:23: note: FIX-IT applied suggested code changes
+    int czas_przybycia;
+                      ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:14:27: note: FIX-IT applied suggested code changes
+    int czas_na_procesorze;
+                          ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:15:37: note: FIX-IT applied suggested code changes
+    int pozostaly_czas_na_procesorze;
+                                    ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:17:25: note: FIX-IT applied suggested code changes
+    float response_ratio;
+                        ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:18:25: note: FIX-IT applied suggested code changes
+    int czas_zakonczenia;
+                        ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:11:8: warning: constructor does not initialize these fields: czas_przybycia, czas_na_procesorze, pozostaly_czas_na_procesorze, response_ratio, czas_zakonczenia [hicpp-member-init]
+struct proces{
+       ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:13:23: note: FIX-IT applied suggested code changes
+    int czas_przybycia;
+                      ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:14:27: note: FIX-IT applied suggested code changes
+    int czas_na_procesorze;
+                          ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:15:37: note: FIX-IT applied suggested code changes
+    int pozostaly_czas_na_procesorze;
+                                    ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:17:25: note: FIX-IT applied suggested code changes
+    float response_ratio;
+                        ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:18:25: note: FIX-IT applied suggested code changes
+    int czas_zakonczenia;
+                        ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:21:7: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+float sredni_czas_czekania(vector<proces> lista)
+~~~~~ ^
+auto                                             -> float
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:21:1: note: FIX-IT applied suggested code changes
+float sredni_czas_czekania(vector<proces> lista)
+^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:21:49: note: FIX-IT applied suggested code changes
+float sredni_czas_czekania(vector<proces> lista)
+                                                ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:24:5: warning: use range-based for loop instead [modernize-loop-convert]
+    for(int i=0; i<lista.size(); i++)
+    ^  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       (auto & i : lista)
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:24:8: note: FIX-IT applied suggested code changes
+    for(int i=0; i<lista.size(); i++)
+       ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:25:31: note: FIX-IT applied suggested code changes
+        suma_czasow_czekania+=lista[i].czas_czekania;
+                              ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:24:38: warning: statement should be inside braces [google-readability-braces-around-statements]
+    for(int i=0; i<lista.size(); i++)
+                                     ^
+                                      {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:24:38: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:25:54: note: FIX-IT applied suggested code changes
+        suma_czasow_czekania+=lista[i].czas_czekania;
+                                                     ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:24:38: warning: statement should be inside braces [hicpp-braces-around-statements]
+    for(int i=0; i<lista.size(); i++)
+                                     ^
+                                      {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:24:38: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:25:54: note: FIX-IT applied suggested code changes
+        suma_czasow_czekania+=lista[i].czas_czekania;
+                                                     ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:24:38: warning: statement should be inside braces [readability-braces-around-statements]
+    for(int i=0; i<lista.size(); i++)
+                                     ^
+                                      {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:24:38: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:25:54: note: FIX-IT applied suggested code changes
+        suma_czasow_czekania+=lista[i].czas_czekania;
+                                                     ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:25:31: warning: narrowing conversion from 'int' to 'float' [bugprone-narrowing-conversions]
+        suma_czasow_czekania+=lista[i].czas_czekania;
+                              ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:25:31: warning: narrowing conversion from 'int' to 'float' [cppcoreguidelines-narrowing-conversions]
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:31:5: warning: use range-based for loop instead [modernize-loop-convert]
+    for(int i=0; i<lista.size(); i++)
+    ^  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       (auto & i : lista)
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:31:8: note: FIX-IT applied suggested code changes
+    for(int i=0; i<lista.size(); i++)
+       ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:33:49: note: FIX-IT applied suggested code changes
+            cout << "Czas czekania procesu " << lista[i].PID << ": " << lista[i].czas_czekania << endl;
+                                                ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:33:73: note: FIX-IT applied suggested code changes
+            cout << "Czas czekania procesu " << lista[i].PID << ": " << lista[i].czas_czekania << endl;
+                                                                        ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:34:52: note: FIX-IT applied suggested code changes
+            cout << "Czas zakonczenia procesu " << lista[i].PID << ": " << lista[i].czas_zakonczenia << endl;
+                                                   ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:34:76: note: FIX-IT applied suggested code changes
+            cout << "Czas zakonczenia procesu " << lista[i].PID << ": " << lista[i].czas_zakonczenia << endl;
+                                                                           ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:38:6: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+bool koniec(vector<proces> lista)
+~~~~ ^
+auto                              -> bool
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:38:1: note: FIX-IT applied suggested code changes
+bool koniec(vector<proces> lista)
+^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:38:34: note: FIX-IT applied suggested code changes
+bool koniec(vector<proces> lista)
+                                 ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:41:5: warning: use range-based for loop instead [modernize-loop-convert]
+    for(int i=0; i<lista.size(); i++)
+    ^  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       (auto & i : lista)
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:41:8: note: FIX-IT applied suggested code changes
+    for(int i=0; i<lista.size(); i++)
+       ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:42:25: note: FIX-IT applied suggested code changes
+        pozostaly_czas+=lista[i].pozostaly_czas_na_procesorze;
+                        ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:41:38: warning: statement should be inside braces [google-readability-braces-around-statements]
+    for(int i=0; i<lista.size(); i++)
+                                     ^
+                                      {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:41:38: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:42:63: note: FIX-IT applied suggested code changes
+        pozostaly_czas+=lista[i].pozostaly_czas_na_procesorze;
+                                                              ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:41:38: warning: statement should be inside braces [hicpp-braces-around-statements]
+    for(int i=0; i<lista.size(); i++)
+                                     ^
+                                      {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:41:38: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:42:63: note: FIX-IT applied suggested code changes
+        pozostaly_czas+=lista[i].pozostaly_czas_na_procesorze;
+                                                              ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:41:38: warning: statement should be inside braces [readability-braces-around-statements]
+    for(int i=0; i<lista.size(); i++)
+                                     ^
+                                      {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:41:38: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:42:63: note: FIX-IT applied suggested code changes
+        pozostaly_czas+=lista[i].pozostaly_czas_na_procesorze;
+                                                              ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:43:28: warning: statement should be inside braces [google-readability-braces-around-statements]
+    if(pozostaly_czas == 0)
+                           ^
+                            {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:43:28: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:45:5: note: FIX-IT applied suggested code changes
+    else
+    ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:43:28: warning: statement should be inside braces [hicpp-braces-around-statements]
+    if(pozostaly_czas == 0)
+                           ^
+                            {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:43:28: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:45:5: note: FIX-IT applied suggested code changes
+    else
+    ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:43:28: warning: statement should be inside braces [readability-braces-around-statements]
+    if(pozostaly_czas == 0)
+                           ^
+                            {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:43:28: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:45:5: note: FIX-IT applied suggested code changes
+    else
+    ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:44:16: warning: redundant boolean literal in conditional return statement [readability-simplify-boolean-expr]
+        return false;
+~~~~~~~~~~~~~~~^~~~~~
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:43:5: note: FIX-IT unable to apply suggested code changes
+    if(pozostaly_czas == 0)
+    ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:45:5: warning: do not use 'else' after 'return' [readability-else-after-return]
+    else
+    ^
+note: this fix will not be applied because it overlaps with another fix
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:45:9: warning: statement should be inside braces [google-readability-braces-around-statements]
+    else
+        ^
+         {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:45:9: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:46:21: note: FIX-IT applied suggested code changes
+        return true;
+                    ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:45:9: warning: statement should be inside braces [hicpp-braces-around-statements]
+    else
+        ^
+         {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:45:9: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:46:21: note: FIX-IT applied suggested code changes
+        return true;
+                    ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:45:9: warning: statement should be inside braces [readability-braces-around-statements]
+    else
+        ^
+         {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:45:9: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:46:21: note: FIX-IT applied suggested code changes
+        return true;
+                    ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:49:28: warning: the parameter 'lista' is copied for each invocation but only used as a const reference; consider making it a const reference [performance-unnecessary-value-param]
+void wypisz(vector<proces> lista, int czas)
+                           ^
+            const         &
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:49:13: note: FIX-IT applied suggested code changes
+void wypisz(vector<proces> lista, int czas)
+            ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:49:27: note: FIX-IT applied suggested code changes
+void wypisz(vector<proces> lista, int czas)
+                          ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:58:47: warning: the parameter 'algorytm' is copied for each invocation but only used as a const reference; consider making it a const reference [performance-unnecessary-value-param]
+void zapisz_plik(vector<proces> lista, string algorytm, int czas)
+                                              ^
+                                       const &
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:58:40: note: FIX-IT applied suggested code changes
+void zapisz_plik(vector<proces> lista, string algorytm, int czas)
+                                       ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:58:46: note: FIX-IT applied suggested code changes
+void zapisz_plik(vector<proces> lista, string algorytm, int czas)
+                                             ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:64:5: warning: use range-based for loop instead [modernize-loop-convert]
+    for(int i=0; i<lista.size(); i++)
+    ^  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       (auto & i : lista)
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:64:8: note: FIX-IT applied suggested code changes
+    for(int i=0; i<lista.size(); i++)
+       ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:66:45: note: FIX-IT applied suggested code changes
+        plik << "Czas czekania procesu " << lista[i].PID << ": " << lista[i].czas_czekania << endl;
+                                            ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:66:69: note: FIX-IT applied suggested code changes
+        plik << "Czas czekania procesu " << lista[i].PID << ": " << lista[i].czas_czekania << endl;
+                                                                    ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:67:48: note: FIX-IT applied suggested code changes
+        plik << "Czas zakonczenia procesu " << lista[i].PID << ": " << lista[i].czas_zakonczenia << endl;
+                                               ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:67:72: note: FIX-IT applied suggested code changes
+        plik << "Czas zakonczenia procesu " << lista[i].PID << ": " << lista[i].czas_zakonczenia << endl;
+                                                                       ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:74:35: warning: non-const reference parameter 'lista', make it const or use a pointer [google-runtime-references]
+void wczytaj_plik(vector<proces> &lista, int &kwant_czasu)
+                                  ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:74:47: warning: non-const reference parameter 'kwant_czasu', make it const or use a pointer [google-runtime-references]
+void wczytaj_plik(vector<proces> &lista, int &kwant_czasu)
+                                              ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:77:5: warning: calling a function that uses a default argument is disallowed [fuchsia-default-arguments-calls]
+    plik.open( "lista_procesow.txt" );
+    ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/fstream:658:29: note: default parameter was declared here
+      open(const char* __s, ios_base::openmode __mode = ios_base::in)
+                            ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:94:28: warning: statement should be inside braces [google-readability-braces-around-statements]
+            if(plik.fail())
+                           ^
+                            {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:94:28: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:95:23: note: FIX-IT applied suggested code changes
+                break;
+                      ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:94:28: warning: statement should be inside braces [hicpp-braces-around-statements]
+            if(plik.fail())
+                           ^
+                            {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:94:28: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:95:23: note: FIX-IT applied suggested code changes
+                break;
+                      ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:94:28: warning: statement should be inside braces [readability-braces-around-statements]
+            if(plik.fail())
+                           ^
+                            {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:94:28: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:95:23: note: FIX-IT applied suggested code changes
+                break;
+                      ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:102:9: warning: calling a function that uses a default argument is disallowed [fuchsia-default-arguments-calls]
+        plik.open( "lista_procesow.txt" );
+        ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/fstream:658:29: note: default parameter was declared here
+      open(const char* __s, ios_base::openmode __mode = ios_base::in)
+                            ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:107:28: warning: statement should be inside braces [google-readability-braces-around-statements]
+            if(plik.fail())
+                           ^
+                            {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:107:28: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:108:23: note: FIX-IT applied suggested code changes
+                break;
+                      ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:107:28: warning: statement should be inside braces [hicpp-braces-around-statements]
+            if(plik.fail())
+                           ^
+                            {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:107:28: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:108:23: note: FIX-IT applied suggested code changes
+                break;
+                      ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:107:28: warning: statement should be inside braces [readability-braces-around-statements]
+            if(plik.fail())
+                           ^
+                            {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:107:28: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:108:23: note: FIX-IT applied suggested code changes
+                break;
+                      ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:112:9: warning: use range-based for loop instead [modernize-loop-convert]
+        for(int i=0; i<lista.size(); i++)
+        ^  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+           (auto & i : lista)
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:112:12: note: FIX-IT applied suggested code changes
+        for(int i=0; i<lista.size(); i++)
+           ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:113:39: note: FIX-IT applied suggested code changes
+            suma_czasu_na_procesorze+=lista[i].czas_na_procesorze;
+                                      ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:112:42: warning: statement should be inside braces [google-readability-braces-around-statements]
+        for(int i=0; i<lista.size(); i++)
+                                         ^
+                                          {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:112:42: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:113:67: note: FIX-IT applied suggested code changes
+            suma_czasu_na_procesorze+=lista[i].czas_na_procesorze;
+                                                                  ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:112:42: warning: statement should be inside braces [hicpp-braces-around-statements]
+        for(int i=0; i<lista.size(); i++)
+                                         ^
+                                          {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:112:42: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:113:67: note: FIX-IT applied suggested code changes
+            suma_czasu_na_procesorze+=lista[i].czas_na_procesorze;
+                                                                  ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:112:42: warning: statement should be inside braces [readability-braces-around-statements]
+        for(int i=0; i<lista.size(); i++)
+                                         ^
+                                          {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:112:42: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:113:67: note: FIX-IT applied suggested code changes
+            suma_czasu_na_procesorze+=lista[i].czas_na_procesorze;
+                                                                  ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:114:23: warning: narrowing conversion from 'unsigned long' to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+        kwant_czasu = suma_czasu_na_procesorze/(2*lista.size());
+                      ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:114:23: warning: narrowing conversion from 'unsigned long' to signed type 'int' is implementation-defined [cppcoreguidelines-narrowing-conversions]
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:115:29: warning: statement should be inside braces [google-readability-braces-around-statements]
+        if(kwant_czasu == 0)
+                            ^
+                             {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:115:29: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:116:29: note: FIX-IT applied suggested code changes
+            kwant_czasu = 1;
+                            ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:115:29: warning: statement should be inside braces [hicpp-braces-around-statements]
+        if(kwant_czasu == 0)
+                            ^
+                             {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:115:29: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:116:29: note: FIX-IT applied suggested code changes
+            kwant_czasu = 1;
+                            ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:115:29: warning: statement should be inside braces [readability-braces-around-statements]
+        if(kwant_czasu == 0)
+                            ^
+                             {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:115:29: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:116:29: note: FIX-IT applied suggested code changes
+            kwant_czasu = 1;
+                            ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:120:38: warning: non-const reference parameter 'lista', make it const or use a pointer [google-runtime-references]
+void wczytaj_konsole(vector<proces> &lista, int &kwant_czasu)
+                                     ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:120:50: warning: non-const reference parameter 'kwant_czasu', make it const or use a pointer [google-runtime-references]
+void wczytaj_konsole(vector<proces> &lista, int &kwant_czasu)
+                                                 ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:122:44: warning: variable 'liczba_procesow' is not initialized [cppcoreguidelines-init-variables]
+    cout << "Podaj liczbe procesow: "; int liczba_procesow; cin >> liczba_procesow;
+                                           ^
+                                                           = 0
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:122:59: note: FIX-IT applied suggested code changes
+    cout << "Podaj liczbe procesow: "; int liczba_procesow; cin >> liczba_procesow;
+                                                          ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:132:93: warning: variable 'znak' is not initialized [cppcoreguidelines-init-variables]
+    cout << "Czy chcesz podac kwant czasu dla algorytmu RR? (t - tak, n-nie)" << endl; char znak; cin >> znak;
+                                                                                            ^
+                                                                                                 = 0
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:132:97: note: FIX-IT applied suggested code changes
+    cout << "Czy chcesz podac kwant czasu dla algorytmu RR? (t - tak, n-nie)" << endl; char znak; cin >> znak;
+                                                                                                ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:142:17: warning: use range-based for loop instead [modernize-loop-convert]
+                for(int i=0; i<lista.size(); i++)
+                ^  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                   (auto & i : lista)
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:142:20: note: FIX-IT applied suggested code changes
+                for(int i=0; i<lista.size(); i++)
+                   ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:143:47: note: FIX-IT applied suggested code changes
+                    suma_czasu_na_procesorze+=lista[i].czas_na_procesorze;
+                                              ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:142:50: warning: statement should be inside braces [google-readability-braces-around-statements]
+                for(int i=0; i<lista.size(); i++)
+                                                 ^
+                                                  {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:142:50: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:143:75: note: FIX-IT applied suggested code changes
+                    suma_czasu_na_procesorze+=lista[i].czas_na_procesorze;
+                                                                          ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:142:50: warning: statement should be inside braces [hicpp-braces-around-statements]
+                for(int i=0; i<lista.size(); i++)
+                                                 ^
+                                                  {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:142:50: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:143:75: note: FIX-IT applied suggested code changes
+                    suma_czasu_na_procesorze+=lista[i].czas_na_procesorze;
+                                                                          ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:142:50: warning: statement should be inside braces [readability-braces-around-statements]
+                for(int i=0; i<lista.size(); i++)
+                                                 ^
+                                                  {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:142:50: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:143:75: note: FIX-IT applied suggested code changes
+                    suma_czasu_na_procesorze+=lista[i].czas_na_procesorze;
+                                                                          ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:144:31: warning: narrowing conversion from 'unsigned long' to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+                kwant_czasu = suma_czasu_na_procesorze/(2*lista.size());
+                              ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:144:31: warning: narrowing conversion from 'unsigned long' to signed type 'int' is implementation-defined [cppcoreguidelines-narrowing-conversions]
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:145:35: warning: statement should be inside braces [google-readability-braces-around-statements]
+                if(kwant_czasu==0)
+                                  ^
+                                   {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:145:35: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:146:35: note: FIX-IT applied suggested code changes
+                    kwant_czasu=1;
+                                  ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:145:35: warning: statement should be inside braces [hicpp-braces-around-statements]
+                if(kwant_czasu==0)
+                                  ^
+                                   {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:145:35: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:146:35: note: FIX-IT applied suggested code changes
+                    kwant_czasu=1;
+                                  ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:145:35: warning: statement should be inside braces [readability-braces-around-statements]
+                if(kwant_czasu==0)
+                                  ^
+                                   {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:145:35: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:146:35: note: FIX-IT applied suggested code changes
+                    kwant_czasu=1;
+                                  ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:158:37: warning: calling a function that uses a default argument is disallowed [fuchsia-default-arguments-calls]
+    int czas = 0; string algorytm = "FCFS";
+                                    ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/bits/basic_string.h:529:39: note: default parameter was declared here
+      basic_string(const _CharT* __s, const _Alloc& __a = _Alloc())
+                                      ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:163:42: warning: statement should be inside braces [google-readability-braces-around-statements]
+        for(int i=0; i<lista.size(); i++)
+                                         ^
+                                          {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:163:42: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:168:18: note: FIX-IT applied suggested code changes
+                }
+                 ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:163:42: warning: statement should be inside braces [hicpp-braces-around-statements]
+        for(int i=0; i<lista.size(); i++)
+                                         ^
+                                          {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:163:42: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:168:18: note: FIX-IT applied suggested code changes
+                }
+                 ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:163:42: warning: statement should be inside braces [readability-braces-around-statements]
+        for(int i=0; i<lista.size(); i++)
+                                         ^
+                                          {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:163:42: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:168:18: note: FIX-IT applied suggested code changes
+                }
+                 ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:175:42: warning: statement should be inside braces [google-readability-braces-around-statements]
+        for(int i=0; i<lista.size(); i++)
+                                         ^
+                                          {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:175:42: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:177:49: note: FIX-IT applied suggested code changes
+                numer_procesu_na_procesorze = i;
+                                                ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:175:42: warning: statement should be inside braces [hicpp-braces-around-statements]
+        for(int i=0; i<lista.size(); i++)
+                                         ^
+                                          {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:175:42: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:177:49: note: FIX-IT applied suggested code changes
+                numer_procesu_na_procesorze = i;
+                                                ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:175:42: warning: statement should be inside braces [readability-braces-around-statements]
+        for(int i=0; i<lista.size(); i++)
+                                         ^
+                                          {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:175:42: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:177:49: note: FIX-IT applied suggested code changes
+                numer_procesu_na_procesorze = i;
+                                                ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:176:171: warning: statement should be inside braces [google-readability-braces-around-statements]
+            if(lista[numer_procesu_na_procesorze].czas_przybycia > lista[i].czas_przybycia && lista[i].pozostaly_czas_na_procesorze != 0 && lista[i].czas_przybycia<=czas)
+                                                                                                                                                                          ^
+                                                                                                                                                                           {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:176:171: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:177:49: note: FIX-IT applied suggested code changes
+                numer_procesu_na_procesorze = i;
+                                                ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:176:171: warning: statement should be inside braces [hicpp-braces-around-statements]
+            if(lista[numer_procesu_na_procesorze].czas_przybycia > lista[i].czas_przybycia && lista[i].pozostaly_czas_na_procesorze != 0 && lista[i].czas_przybycia<=czas)
+                                                                                                                                                                          ^
+                                                                                                                                                                           {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:176:171: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:177:49: note: FIX-IT applied suggested code changes
+                numer_procesu_na_procesorze = i;
+                                                ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:176:171: warning: statement should be inside braces [readability-braces-around-statements]
+            if(lista[numer_procesu_na_procesorze].czas_przybycia > lista[i].czas_przybycia && lista[i].pozostaly_czas_na_procesorze != 0 && lista[i].czas_przybycia<=czas)
+                                                                                                                                                                          ^
+                                                                                                                                                                           {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:176:171: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:177:49: note: FIX-IT applied suggested code changes
+                numer_procesu_na_procesorze = i;
+                                                ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:182:46: warning: statement should be inside braces [google-readability-braces-around-statements]
+            for(int i=0; i<lista.size(); i++)
+                                             ^
+                                              {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:182:46: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:184:46: note: FIX-IT applied suggested code changes
+                    lista[i].czas_czekania++;
+                                             ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:182:46: warning: statement should be inside braces [hicpp-braces-around-statements]
+            for(int i=0; i<lista.size(); i++)
+                                             ^
+                                              {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:182:46: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:184:46: note: FIX-IT applied suggested code changes
+                    lista[i].czas_czekania++;
+                                             ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:182:46: warning: statement should be inside braces [readability-braces-around-statements]
+            for(int i=0; i<lista.size(); i++)
+                                             ^
+                                              {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:182:46: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:184:46: note: FIX-IT applied suggested code changes
+                    lista[i].czas_czekania++;
+                                             ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:183:154: warning: statement should be inside braces [google-readability-braces-around-statements]
+                if(lista[i].czas_przybycia<=czas && lista[i].pozostaly_czas_na_procesorze != 0 && lista[numer_procesu_na_procesorze].PID != lista[i].PID)
+                                                                                                                                                         ^
+                                                                                                                                                          {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:183:154: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:184:46: note: FIX-IT applied suggested code changes
+                    lista[i].czas_czekania++;
+                                             ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:183:154: warning: statement should be inside braces [hicpp-braces-around-statements]
+                if(lista[i].czas_przybycia<=czas && lista[i].pozostaly_czas_na_procesorze != 0 && lista[numer_procesu_na_procesorze].PID != lista[i].PID)
+                                                                                                                                                         ^
+                                                                                                                                                          {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:183:154: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:184:46: note: FIX-IT applied suggested code changes
+                    lista[i].czas_czekania++;
+                                             ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:183:154: warning: statement should be inside braces [readability-braces-around-statements]
+                if(lista[i].czas_przybycia<=czas && lista[i].pozostaly_czas_na_procesorze != 0 && lista[numer_procesu_na_procesorze].PID != lista[i].PID)
+                                                                                                                                                         ^
+                                                                                                                                                          {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:183:154: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:184:46: note: FIX-IT applied suggested code changes
+                    lista[i].czas_czekania++;
+                                             ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:187:79: warning: statement should be inside braces [google-readability-braces-around-statements]
+        if(lista[numer_procesu_na_procesorze].pozostaly_czas_na_procesorze==0)
+                                                                              ^
+                                                                               {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:187:79: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:188:72: note: FIX-IT applied suggested code changes
+            lista[numer_procesu_na_procesorze].czas_zakonczenia = czas;
+                                                                       ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:187:79: warning: statement should be inside braces [hicpp-braces-around-statements]
+        if(lista[numer_procesu_na_procesorze].pozostaly_czas_na_procesorze==0)
+                                                                              ^
+                                                                               {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:187:79: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:188:72: note: FIX-IT applied suggested code changes
+            lista[numer_procesu_na_procesorze].czas_zakonczenia = czas;
+                                                                       ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:187:79: warning: statement should be inside braces [readability-braces-around-statements]
+        if(lista[numer_procesu_na_procesorze].pozostaly_czas_na_procesorze==0)
+                                                                              ^
+                                                                               {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:187:79: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:188:72: note: FIX-IT applied suggested code changes
+            lista[numer_procesu_na_procesorze].czas_zakonczenia = czas;
+                                                                       ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:196:37: warning: calling a function that uses a default argument is disallowed [fuchsia-default-arguments-calls]
+    int czas = 0; string algorytm = "SJF";
+                                    ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/bits/basic_string.h:529:39: note: default parameter was declared here
+      basic_string(const _CharT* __s, const _Alloc& __a = _Alloc())
+                                      ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:201:42: warning: statement should be inside braces [google-readability-braces-around-statements]
+        for(int i=0; i<lista.size(); i++)
+                                         ^
+                                          {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:201:42: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:206:18: note: FIX-IT applied suggested code changes
+                }
+                 ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:201:42: warning: statement should be inside braces [hicpp-braces-around-statements]
+        for(int i=0; i<lista.size(); i++)
+                                         ^
+                                          {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:201:42: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:206:18: note: FIX-IT applied suggested code changes
+                }
+                 ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:201:42: warning: statement should be inside braces [readability-braces-around-statements]
+        for(int i=0; i<lista.size(); i++)
+                                         ^
+                                          {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:201:42: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:206:18: note: FIX-IT applied suggested code changes
+                }
+                 ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:213:42: warning: statement should be inside braces [google-readability-braces-around-statements]
+        for(int i=0; i<lista.size(); i++)
+                                         ^
+                                          {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:213:42: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:215:49: note: FIX-IT applied suggested code changes
+                numer_procesu_na_procesorze = i;
+                                                ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:213:42: warning: statement should be inside braces [hicpp-braces-around-statements]
+        for(int i=0; i<lista.size(); i++)
+                                         ^
+                                          {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:213:42: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:215:49: note: FIX-IT applied suggested code changes
+                numer_procesu_na_procesorze = i;
+                                                ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:213:42: warning: statement should be inside braces [readability-braces-around-statements]
+        for(int i=0; i<lista.size(); i++)
+                                         ^
+                                          {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:213:42: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:215:49: note: FIX-IT applied suggested code changes
+                numer_procesu_na_procesorze = i;
+                                                ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:214:179: warning: statement should be inside braces [google-readability-braces-around-statements]
+            if(lista[numer_procesu_na_procesorze].czas_na_procesorze>lista[i].czas_na_procesorze && lista[i].pozostaly_czas_na_procesorze != 0 && lista[i].czas_przybycia <= czas)
+                                                                                                                                                                                  ^
+                                                                                                                                                                                   {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:214:179: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:215:49: note: FIX-IT applied suggested code changes
+                numer_procesu_na_procesorze = i;
+                                                ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:214:179: warning: statement should be inside braces [hicpp-braces-around-statements]
+            if(lista[numer_procesu_na_procesorze].czas_na_procesorze>lista[i].czas_na_procesorze && lista[i].pozostaly_czas_na_procesorze != 0 && lista[i].czas_przybycia <= czas)
+                                                                                                                                                                                  ^
+                                                                                                                                                                                   {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:214:179: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:215:49: note: FIX-IT applied suggested code changes
+                numer_procesu_na_procesorze = i;
+                                                ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:214:179: warning: statement should be inside braces [readability-braces-around-statements]
+            if(lista[numer_procesu_na_procesorze].czas_na_procesorze>lista[i].czas_na_procesorze && lista[i].pozostaly_czas_na_procesorze != 0 && lista[i].czas_przybycia <= czas)
+                                                                                                                                                                                  ^
+                                                                                                                                                                                   {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:214:179: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:215:49: note: FIX-IT applied suggested code changes
+                numer_procesu_na_procesorze = i;
+                                                ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:220:46: warning: statement should be inside braces [google-readability-braces-around-statements]
+            for(int i=0; i<lista.size(); i++)
+                                             ^
+                                              {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:220:46: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:222:46: note: FIX-IT applied suggested code changes
+                    lista[i].czas_czekania++;
+                                             ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:220:46: warning: statement should be inside braces [hicpp-braces-around-statements]
+            for(int i=0; i<lista.size(); i++)
+                                             ^
+                                              {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:220:46: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:222:46: note: FIX-IT applied suggested code changes
+                    lista[i].czas_czekania++;
+                                             ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:220:46: warning: statement should be inside braces [readability-braces-around-statements]
+            for(int i=0; i<lista.size(); i++)
+                                             ^
+                                              {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:220:46: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:222:46: note: FIX-IT applied suggested code changes
+                    lista[i].czas_czekania++;
+                                             ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:221:154: warning: statement should be inside braces [google-readability-braces-around-statements]
+                if(lista[i].czas_przybycia<=czas && lista[i].pozostaly_czas_na_procesorze != 0 && lista[numer_procesu_na_procesorze].PID != lista[i].PID)
+                                                                                                                                                         ^
+                                                                                                                                                          {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:221:154: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:222:46: note: FIX-IT applied suggested code changes
+                    lista[i].czas_czekania++;
+                                             ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:221:154: warning: statement should be inside braces [hicpp-braces-around-statements]
+                if(lista[i].czas_przybycia<=czas && lista[i].pozostaly_czas_na_procesorze != 0 && lista[numer_procesu_na_procesorze].PID != lista[i].PID)
+                                                                                                                                                         ^
+                                                                                                                                                          {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:221:154: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:222:46: note: FIX-IT applied suggested code changes
+                    lista[i].czas_czekania++;
+                                             ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:221:154: warning: statement should be inside braces [readability-braces-around-statements]
+                if(lista[i].czas_przybycia<=czas && lista[i].pozostaly_czas_na_procesorze != 0 && lista[numer_procesu_na_procesorze].PID != lista[i].PID)
+                                                                                                                                                         ^
+                                                                                                                                                          {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:221:154: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:222:46: note: FIX-IT applied suggested code changes
+                    lista[i].czas_czekania++;
+                                             ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:225:79: warning: statement should be inside braces [google-readability-braces-around-statements]
+        if(lista[numer_procesu_na_procesorze].pozostaly_czas_na_procesorze==0)
+                                                                              ^
+                                                                               {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:225:79: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:226:72: note: FIX-IT applied suggested code changes
+            lista[numer_procesu_na_procesorze].czas_zakonczenia = czas;
+                                                                       ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:225:79: warning: statement should be inside braces [hicpp-braces-around-statements]
+        if(lista[numer_procesu_na_procesorze].pozostaly_czas_na_procesorze==0)
+                                                                              ^
+                                                                               {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:225:79: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:226:72: note: FIX-IT applied suggested code changes
+            lista[numer_procesu_na_procesorze].czas_zakonczenia = czas;
+                                                                       ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:225:79: warning: statement should be inside braces [readability-braces-around-statements]
+        if(lista[numer_procesu_na_procesorze].pozostaly_czas_na_procesorze==0)
+                                                                              ^
+                                                                               {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:225:79: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:226:72: note: FIX-IT applied suggested code changes
+            lista[numer_procesu_na_procesorze].czas_zakonczenia = czas;
+                                                                       ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:234:37: warning: calling a function that uses a default argument is disallowed [fuchsia-default-arguments-calls]
+    int czas = 0; string algorytm = "HRRN";
+                                    ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/bits/basic_string.h:529:39: note: default parameter was declared here
+      basic_string(const _CharT* __s, const _Alloc& __a = _Alloc())
+                                      ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:239:46: warning: statement should be inside braces [google-readability-braces-around-statements]
+            for(int i=0; i<lista.size(); i++)
+                                             ^
+                                              {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:239:46: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:244:22: note: FIX-IT applied suggested code changes
+                    }
+                     ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:239:46: warning: statement should be inside braces [hicpp-braces-around-statements]
+            for(int i=0; i<lista.size(); i++)
+                                             ^
+                                              {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:239:46: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:244:22: note: FIX-IT applied suggested code changes
+                    }
+                     ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:239:46: warning: statement should be inside braces [readability-braces-around-statements]
+            for(int i=0; i<lista.size(); i++)
+                                             ^
+                                              {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:239:46: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:244:22: note: FIX-IT applied suggested code changes
+                    }
+                     ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:251:9: warning: use range-based for loop instead [modernize-loop-convert]
+        for(int i=0; i<lista.size(); i++)
+        ^  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+           (auto & i : lista)
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:251:12: note: FIX-IT applied suggested code changes
+        for(int i=0; i<lista.size(); i++)
+           ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:252:13: note: FIX-IT applied suggested code changes
+            lista[i].response_ratio=(float)(lista[i].czas_czekania+lista[i].czas_na_procesorze)/(float)lista[i].czas_na_procesorze;
+            ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:252:45: note: FIX-IT applied suggested code changes
+            lista[i].response_ratio=(float)(lista[i].czas_czekania+lista[i].czas_na_procesorze)/(float)lista[i].czas_na_procesorze;
+                                            ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:252:68: note: FIX-IT applied suggested code changes
+            lista[i].response_ratio=(float)(lista[i].czas_czekania+lista[i].czas_na_procesorze)/(float)lista[i].czas_na_procesorze;
+                                                                   ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:252:104: note: FIX-IT applied suggested code changes
+            lista[i].response_ratio=(float)(lista[i].czas_czekania+lista[i].czas_na_procesorze)/(float)lista[i].czas_na_procesorze;
+                                                                                                       ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:251:42: warning: statement should be inside braces [google-readability-braces-around-statements]
+        for(int i=0; i<lista.size(); i++)
+                                         ^
+                                          {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:251:42: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:252:132: note: FIX-IT applied suggested code changes
+            lista[i].response_ratio=(float)(lista[i].czas_czekania+lista[i].czas_na_procesorze)/(float)lista[i].czas_na_procesorze;
+                                                                                                                                   ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:251:42: warning: statement should be inside braces [hicpp-braces-around-statements]
+        for(int i=0; i<lista.size(); i++)
+                                         ^
+                                          {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:251:42: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:252:132: note: FIX-IT applied suggested code changes
+            lista[i].response_ratio=(float)(lista[i].czas_czekania+lista[i].czas_na_procesorze)/(float)lista[i].czas_na_procesorze;
+                                                                                                                                   ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:251:42: warning: statement should be inside braces [readability-braces-around-statements]
+        for(int i=0; i<lista.size(); i++)
+                                         ^
+                                          {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:251:42: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:252:132: note: FIX-IT applied suggested code changes
+            lista[i].response_ratio=(float)(lista[i].czas_czekania+lista[i].czas_na_procesorze)/(float)lista[i].czas_na_procesorze;
+                                                                                                                                   ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:252:37: warning: C-style casts are discouraged; use static_cast [google-readability-casting]
+            lista[i].response_ratio=(float)(lista[i].czas_czekania+lista[i].czas_na_procesorze)/(float)lista[i].czas_na_procesorze;
+                                    ^~~~~~~
+                                    static_cast<float>
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:252:37: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:252:97: warning: C-style casts are discouraged; use static_cast [google-readability-casting]
+            lista[i].response_ratio=(float)(lista[i].czas_czekania+lista[i].czas_na_procesorze)/(float)lista[i].czas_na_procesorze;
+                                                                                                ^~~~~~~
+                                                                                                static_cast<float>(               )
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:252:97: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:252:131: note: FIX-IT applied suggested code changes
+            lista[i].response_ratio=(float)(lista[i].czas_czekania+lista[i].czas_na_procesorze)/(float)lista[i].czas_na_procesorze;
+                                                                                                                                  ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:253:42: warning: statement should be inside braces [google-readability-braces-around-statements]
+        for(int i=0; i<lista.size(); i++)
+                                         ^
+                                          {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:253:42: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:255:49: note: FIX-IT applied suggested code changes
+                numer_procesu_na_procesorze = i;
+                                                ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:253:42: warning: statement should be inside braces [hicpp-braces-around-statements]
+        for(int i=0; i<lista.size(); i++)
+                                         ^
+                                          {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:253:42: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:255:49: note: FIX-IT applied suggested code changes
+                numer_procesu_na_procesorze = i;
+                                                ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:253:42: warning: statement should be inside braces [readability-braces-around-statements]
+        for(int i=0; i<lista.size(); i++)
+                                         ^
+                                          {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:253:42: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:255:49: note: FIX-IT applied suggested code changes
+                numer_procesu_na_procesorze = i;
+                                                ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:254:171: warning: statement should be inside braces [google-readability-braces-around-statements]
+            if(lista[numer_procesu_na_procesorze].response_ratio<lista[i].response_ratio && lista[i].pozostaly_czas_na_procesorze != 0 && lista[i].czas_przybycia <= czas)
+                                                                                                                                                                          ^
+                                                                                                                                                                           {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:254:171: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:255:49: note: FIX-IT applied suggested code changes
+                numer_procesu_na_procesorze = i;
+                                                ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:254:171: warning: statement should be inside braces [hicpp-braces-around-statements]
+            if(lista[numer_procesu_na_procesorze].response_ratio<lista[i].response_ratio && lista[i].pozostaly_czas_na_procesorze != 0 && lista[i].czas_przybycia <= czas)
+                                                                                                                                                                          ^
+                                                                                                                                                                           {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:254:171: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:255:49: note: FIX-IT applied suggested code changes
+                numer_procesu_na_procesorze = i;
+                                                ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:254:171: warning: statement should be inside braces [readability-braces-around-statements]
+            if(lista[numer_procesu_na_procesorze].response_ratio<lista[i].response_ratio && lista[i].pozostaly_czas_na_procesorze != 0 && lista[i].czas_przybycia <= czas)
+                                                                                                                                                                          ^
+                                                                                                                                                                           {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:254:171: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:255:49: note: FIX-IT applied suggested code changes
+                numer_procesu_na_procesorze = i;
+                                                ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:260:46: warning: statement should be inside braces [google-readability-braces-around-statements]
+            for(int i=0; i<lista.size(); i++)
+                                             ^
+                                              {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:260:46: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:262:46: note: FIX-IT applied suggested code changes
+                    lista[i].czas_czekania++;
+                                             ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:260:46: warning: statement should be inside braces [hicpp-braces-around-statements]
+            for(int i=0; i<lista.size(); i++)
+                                             ^
+                                              {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:260:46: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:262:46: note: FIX-IT applied suggested code changes
+                    lista[i].czas_czekania++;
+                                             ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:260:46: warning: statement should be inside braces [readability-braces-around-statements]
+            for(int i=0; i<lista.size(); i++)
+                                             ^
+                                              {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:260:46: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:262:46: note: FIX-IT applied suggested code changes
+                    lista[i].czas_czekania++;
+                                             ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:261:154: warning: statement should be inside braces [google-readability-braces-around-statements]
+                if(lista[i].czas_przybycia<=czas && lista[i].pozostaly_czas_na_procesorze != 0 && lista[numer_procesu_na_procesorze].PID != lista[i].PID)
+                                                                                                                                                         ^
+                                                                                                                                                          {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:261:154: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:262:46: note: FIX-IT applied suggested code changes
+                    lista[i].czas_czekania++;
+                                             ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:261:154: warning: statement should be inside braces [hicpp-braces-around-statements]
+                if(lista[i].czas_przybycia<=czas && lista[i].pozostaly_czas_na_procesorze != 0 && lista[numer_procesu_na_procesorze].PID != lista[i].PID)
+                                                                                                                                                         ^
+                                                                                                                                                          {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:261:154: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:262:46: note: FIX-IT applied suggested code changes
+                    lista[i].czas_czekania++;
+                                             ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:261:154: warning: statement should be inside braces [readability-braces-around-statements]
+                if(lista[i].czas_przybycia<=czas && lista[i].pozostaly_czas_na_procesorze != 0 && lista[numer_procesu_na_procesorze].PID != lista[i].PID)
+                                                                                                                                                         ^
+                                                                                                                                                          {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:261:154: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:262:46: note: FIX-IT applied suggested code changes
+                    lista[i].czas_czekania++;
+                                             ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:265:79: warning: statement should be inside braces [google-readability-braces-around-statements]
+        if(lista[numer_procesu_na_procesorze].pozostaly_czas_na_procesorze==0)
+                                                                              ^
+                                                                               {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:265:79: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:266:72: note: FIX-IT applied suggested code changes
+            lista[numer_procesu_na_procesorze].czas_zakonczenia = czas;
+                                                                       ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:265:79: warning: statement should be inside braces [hicpp-braces-around-statements]
+        if(lista[numer_procesu_na_procesorze].pozostaly_czas_na_procesorze==0)
+                                                                              ^
+                                                                               {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:265:79: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:266:72: note: FIX-IT applied suggested code changes
+            lista[numer_procesu_na_procesorze].czas_zakonczenia = czas;
+                                                                       ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:265:79: warning: statement should be inside braces [readability-braces-around-statements]
+        if(lista[numer_procesu_na_procesorze].pozostaly_czas_na_procesorze==0)
+                                                                              ^
+                                                                               {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:265:79: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:266:72: note: FIX-IT applied suggested code changes
+            lista[numer_procesu_na_procesorze].czas_zakonczenia = czas;
+                                                                       ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:274:88: warning: calling a function that uses a default argument is disallowed [fuchsia-default-arguments-calls]
+    vector<proces> kolejnosc_wykonywania_round_robin; int czas = 0;  string algorytm = "Round Robin";
+                                                                                       ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/bits/basic_string.h:529:39: note: default parameter was declared here
+      basic_string(const _CharT* __s, const _Alloc& __a = _Alloc())
+                                      ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:276:5: warning: use range-based for loop instead [modernize-loop-convert]
+    for(int i=0; i<lista.size(); i++)
+    ^  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       (auto & i : lista)
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:276:8: note: FIX-IT applied suggested code changes
+    for(int i=0; i<lista.size(); i++)
+       ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:278:12: note: FIX-IT applied suggested code changes
+        if(lista[i].czas_przybycia==0)
+           ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:279:57: note: FIX-IT applied suggested code changes
+            kolejnosc_wykonywania_round_robin.push_back(lista[i]);
+                                                        ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:278:39: warning: statement should be inside braces [google-readability-braces-around-statements]
+        if(lista[i].czas_przybycia==0)
+                                      ^
+                                       {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:278:39: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:279:67: note: FIX-IT applied suggested code changes
+            kolejnosc_wykonywania_round_robin.push_back(lista[i]);
+                                                                  ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:278:39: warning: statement should be inside braces [hicpp-braces-around-statements]
+        if(lista[i].czas_przybycia==0)
+                                      ^
+                                       {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:278:39: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:279:67: note: FIX-IT applied suggested code changes
+            kolejnosc_wykonywania_round_robin.push_back(lista[i]);
+                                                                  ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:278:39: warning: statement should be inside braces [readability-braces-around-statements]
+        if(lista[i].czas_przybycia==0)
+                                      ^
+                                       {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:278:39: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:279:67: note: FIX-IT applied suggested code changes
+            kolejnosc_wykonywania_round_robin.push_back(lista[i]);
+                                                                  ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:284:119: warning: the 'empty' method should be used to check for emptiness instead of 'size' [readability-container-size-empty]
+        while(pozostaly_kwant_czasu != 0 && kolejnosc_wykonywania_round_robin[0].pozostaly_czas_na_procesorze != 0 && kolejnosc_wykonywania_round_robin.size()>0)
+                                                                                                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                                                                                                      !kolejnosc_wykonywania_round_robin.empty()
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:284:119: note: FIX-IT applied suggested code changes
+/usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/bits/stl_vector.h:1004:7: note: method 'vector'::empty() defined here
+      empty() const _GLIBCXX_NOEXCEPT
+      ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:288:13: warning: use range-based for loop instead [modernize-loop-convert]
+            for(int i=0; i<lista.size(); i++)
+            ^  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+               (auto & i : lista)
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:288:16: note: FIX-IT applied suggested code changes
+            for(int i=0; i<lista.size(); i++)
+               ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:289:20: note: FIX-IT applied suggested code changes
+                if(lista[i].PID==kolejnosc_wykonywania_round_robin[0].PID)
+                   ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:291:25: note: FIX-IT applied suggested code changes
+                        lista[i]=kolejnosc_wykonywania_round_robin[0];
+                        ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:292:32: note: FIX-IT applied suggested code changes
+                            if(lista[i].pozostaly_czas_na_procesorze == 0)
+                               ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:293:33: note: FIX-IT applied suggested code changes
+                                lista[i].czas_zakonczenia = czas+1;
+                                ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:288:46: warning: statement should be inside braces [google-readability-braces-around-statements]
+            for(int i=0; i<lista.size(); i++)
+                                             ^
+                                              {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:288:46: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:295:22: note: FIX-IT applied suggested code changes
+                    }
+                     ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:288:46: warning: statement should be inside braces [hicpp-braces-around-statements]
+            for(int i=0; i<lista.size(); i++)
+                                             ^
+                                              {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:288:46: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:295:22: note: FIX-IT applied suggested code changes
+                    }
+                     ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:288:46: warning: statement should be inside braces [readability-braces-around-statements]
+            for(int i=0; i<lista.size(); i++)
+                                             ^
+                                              {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:288:46: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:295:22: note: FIX-IT applied suggested code changes
+                    }
+                     ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:292:75: warning: statement should be inside braces [google-readability-braces-around-statements]
+                            if(lista[i].pozostaly_czas_na_procesorze == 0)
+                                                                          ^
+                                                                           {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:292:75: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:293:68: note: FIX-IT applied suggested code changes
+                                lista[i].czas_zakonczenia = czas+1;
+                                                                   ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:292:75: warning: statement should be inside braces [hicpp-braces-around-statements]
+                            if(lista[i].pozostaly_czas_na_procesorze == 0)
+                                                                          ^
+                                                                           {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:292:75: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:293:68: note: FIX-IT applied suggested code changes
+                                lista[i].czas_zakonczenia = czas+1;
+                                                                   ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:292:75: warning: statement should be inside braces [readability-braces-around-statements]
+                            if(lista[i].pozostaly_czas_na_procesorze == 0)
+                                                                          ^
+                                                                           {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:292:75: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:293:68: note: FIX-IT applied suggested code changes
+                                lista[i].czas_zakonczenia = czas+1;
+                                                                   ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:296:13: warning: use range-based for loop instead [modernize-loop-convert]
+            for(int i=0; i<lista.size(); i++)
+            ^  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+               (auto & i : lista)
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:296:16: note: FIX-IT applied suggested code changes
+            for(int i=0; i<lista.size(); i++)
+               ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:297:20: note: FIX-IT applied suggested code changes
+                if(lista[i].PID!=kolejnosc_wykonywania_round_robin[0].PID && lista[i].czas_przybycia<=czas && lista[i].pozostaly_czas_na_procesorze!=0)
+                   ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:297:78: note: FIX-IT applied suggested code changes
+                if(lista[i].PID!=kolejnosc_wykonywania_round_robin[0].PID && lista[i].czas_przybycia<=czas && lista[i].pozostaly_czas_na_procesorze!=0)
+                                                                             ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:297:111: note: FIX-IT applied suggested code changes
+                if(lista[i].PID!=kolejnosc_wykonywania_round_robin[0].PID && lista[i].czas_przybycia<=czas && lista[i].pozostaly_czas_na_procesorze!=0)
+                                                                                                              ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:299:25: note: FIX-IT applied suggested code changes
+                        lista[i].czas_czekania++;
+                        ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:302:32: note: FIX-IT applied suggested code changes
+                            if(lista[i].PID==kolejnosc_wykonywania_round_robin[j].PID)
+                               ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:303:70: note: FIX-IT applied suggested code changes
+                                kolejnosc_wykonywania_round_robin[j]=lista[i];
+                                                                     ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:296:46: warning: statement should be inside braces [google-readability-braces-around-statements]
+            for(int i=0; i<lista.size(); i++)
+                                             ^
+                                              {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:296:46: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:305:22: note: FIX-IT applied suggested code changes
+                    }
+                     ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:296:46: warning: statement should be inside braces [hicpp-braces-around-statements]
+            for(int i=0; i<lista.size(); i++)
+                                             ^
+                                              {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:296:46: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:305:22: note: FIX-IT applied suggested code changes
+                    }
+                     ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:296:46: warning: statement should be inside braces [readability-braces-around-statements]
+            for(int i=0; i<lista.size(); i++)
+                                             ^
+                                              {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:296:46: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:305:22: note: FIX-IT applied suggested code changes
+                    }
+                     ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:302:87: warning: statement should be inside braces [google-readability-braces-around-statements]
+                            if(lista[i].PID==kolejnosc_wykonywania_round_robin[j].PID)
+                                                                                      ^
+                                                                                       {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:302:87: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:303:79: note: FIX-IT applied suggested code changes
+                                kolejnosc_wykonywania_round_robin[j]=lista[i];
+                                                                              ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:302:87: warning: statement should be inside braces [hicpp-braces-around-statements]
+                            if(lista[i].PID==kolejnosc_wykonywania_round_robin[j].PID)
+                                                                                      ^
+                                                                                       {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:302:87: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:303:79: note: FIX-IT applied suggested code changes
+                                kolejnosc_wykonywania_round_robin[j]=lista[i];
+                                                                              ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:302:87: warning: statement should be inside braces [readability-braces-around-statements]
+                            if(lista[i].PID==kolejnosc_wykonywania_round_robin[j].PID)
+                                                                                      ^
+                                                                                       {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:302:87: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:303:79: note: FIX-IT applied suggested code changes
+                                kolejnosc_wykonywania_round_robin[j]=lista[i];
+                                                                              ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:321:62: warning: statement should be inside braces [google-readability-braces-around-statements]
+            if(kolejnosc_wykonywania_round_robin.size() == 1)
+                                                             ^
+                                                              {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:321:62: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:323:104: note: FIX-IT applied suggested code changes
+                    kolejnosc_wykonywania_round_robin.erase(kolejnosc_wykonywania_round_robin.begin());
+                                                                                                       ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:321:62: warning: statement should be inside braces [hicpp-braces-around-statements]
+            if(kolejnosc_wykonywania_round_robin.size() == 1)
+                                                             ^
+                                                              {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:321:62: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:323:104: note: FIX-IT applied suggested code changes
+                    kolejnosc_wykonywania_round_robin.erase(kolejnosc_wykonywania_round_robin.begin());
+                                                                                                       ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:321:62: warning: statement should be inside braces [readability-braces-around-statements]
+            if(kolejnosc_wykonywania_round_robin.size() == 1)
+                                                             ^
+                                                              {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:321:62: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:323:104: note: FIX-IT applied suggested code changes
+                    kolejnosc_wykonywania_round_robin.erase(kolejnosc_wykonywania_round_robin.begin());
+                                                                                                       ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:322:91: warning: statement should be inside braces [google-readability-braces-around-statements]
+                if(kolejnosc_wykonywania_round_robin[0].pozostaly_czas_na_procesorze == 0)
+                                                                                          ^
+                                                                                           {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:322:91: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:323:104: note: FIX-IT applied suggested code changes
+                    kolejnosc_wykonywania_round_robin.erase(kolejnosc_wykonywania_round_robin.begin());
+                                                                                                       ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:322:91: warning: statement should be inside braces [hicpp-braces-around-statements]
+                if(kolejnosc_wykonywania_round_robin[0].pozostaly_czas_na_procesorze == 0)
+                                                                                          ^
+                                                                                           {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:322:91: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:323:104: note: FIX-IT applied suggested code changes
+                    kolejnosc_wykonywania_round_robin.erase(kolejnosc_wykonywania_round_robin.begin());
+                                                                                                       ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:322:91: warning: statement should be inside braces [readability-braces-around-statements]
+                if(kolejnosc_wykonywania_round_robin[0].pozostaly_czas_na_procesorze == 0)
+                                                                                          ^
+                                                                                           {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:322:91: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:323:104: note: FIX-IT applied suggested code changes
+                    kolejnosc_wykonywania_round_robin.erase(kolejnosc_wykonywania_round_robin.begin());
+                                                                                                       ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:325:27: warning: statement should be inside braces [google-readability-braces-around-statements]
+        if(!koniec(lista))
+                          ^
+                           {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:325:27: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:326:22: note: FIX-IT applied suggested code changes
+            continue;
+                     ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:325:27: warning: statement should be inside braces [hicpp-braces-around-statements]
+        if(!koniec(lista))
+                          ^
+                           {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:325:27: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:326:22: note: FIX-IT applied suggested code changes
+            continue;
+                     ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:325:27: warning: statement should be inside braces [readability-braces-around-statements]
+        if(!koniec(lista))
+                          ^
+                           {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:325:27: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:326:22: note: FIX-IT applied suggested code changes
+            continue;
+                     ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:327:22: warning: statement should be inside braces [google-readability-braces-around-statements]
+        if(czas == 0)
+                     ^
+                      {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:327:22: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:328:22: note: FIX-IT applied suggested code changes
+            continue;
+                     ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:327:22: warning: statement should be inside braces [hicpp-braces-around-statements]
+        if(czas == 0)
+                     ^
+                      {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:327:22: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:328:22: note: FIX-IT applied suggested code changes
+            continue;
+                     ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:327:22: warning: statement should be inside braces [readability-braces-around-statements]
+        if(czas == 0)
+                     ^
+                      {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:327:22: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:328:22: note: FIX-IT applied suggested code changes
+            continue;
+                     ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:329:12: warning: the 'empty' method should be used to check for emptiness instead of 'size' [readability-container-size-empty]
+        if(kolejnosc_wykonywania_round_robin.size()==0)
+           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+           kolejnosc_wykonywania_round_robin.empty()
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:329:12: note: FIX-IT applied suggested code changes
+/usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/bits/stl_vector.h:1004:7: note: method 'vector'::empty() defined here
+      empty() const _GLIBCXX_NOEXCEPT
+      ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:340:83: warning: statement should be inside braces [google-readability-braces-around-statements]
+        if(kolejnosc_wykonywania_round_robin[0].pozostaly_czas_na_procesorze == 0)
+                                                                                  ^
+                                                                                   {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:340:83: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:341:96: note: FIX-IT applied suggested code changes
+            kolejnosc_wykonywania_round_robin.erase(kolejnosc_wykonywania_round_robin.begin());
+                                                                                               ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:340:83: warning: statement should be inside braces [hicpp-braces-around-statements]
+        if(kolejnosc_wykonywania_round_robin[0].pozostaly_czas_na_procesorze == 0)
+                                                                                  ^
+                                                                                   {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:340:83: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:341:96: note: FIX-IT applied suggested code changes
+            kolejnosc_wykonywania_round_robin.erase(kolejnosc_wykonywania_round_robin.begin());
+                                                                                               ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:340:83: warning: statement should be inside braces [readability-braces-around-statements]
+        if(kolejnosc_wykonywania_round_robin[0].pozostaly_czas_na_procesorze == 0)
+                                                                                  ^
+                                                                                   {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:340:83: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:341:96: note: FIX-IT applied suggested code changes
+            kolejnosc_wykonywania_round_robin.erase(kolejnosc_wykonywania_round_robin.begin());
+                                                                                               ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:347:5: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+int main()
+~~~ ^
+auto       -> int
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:347:1: note: FIX-IT applied suggested code changes
+int main()
+^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:347:11: note: FIX-IT applied suggested code changes
+int main()
+          ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:349:12: warning: variable 'godzina' is not initialized [cppcoreguidelines-init-variables]
+    time_t godzina;
+           ^
+                   = 0
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:349:19: note: FIX-IT applied suggested code changes
+    time_t godzina;
+                  ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:351:31: warning: variable 'kwant_czasu' is not initialized [cppcoreguidelines-init-variables]
+    vector<proces> lista; int kwant_czasu;
+                              ^
+                                          = 0
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:351:42: note: FIX-IT applied suggested code changes
+    vector<proces> lista; int kwant_czasu;
+                                         ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:353:10: warning: variable 'znak' is not initialized [cppcoreguidelines-init-variables]
+    char znak;
+         ^
+              = 0
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:353:14: note: FIX-IT applied suggested code changes
+    char znak;
+             ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:369:20: warning: 70 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
+    for(int i=0; i<70; i++)
+                   ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:369:20: warning: 70 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:369:28: warning: statement should be inside braces [google-readability-braces-around-statements]
+    for(int i=0; i<70; i++)
+                           ^
+                            {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:369:28: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:370:21: note: FIX-IT applied suggested code changes
+        plik << "-";
+                    ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:369:28: warning: statement should be inside braces [hicpp-braces-around-statements]
+    for(int i=0; i<70; i++)
+                           ^
+                            {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:369:28: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:370:21: note: FIX-IT applied suggested code changes
+        plik << "-";
+                    ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:369:28: warning: statement should be inside braces [readability-braces-around-statements]
+    for(int i=0; i<70; i++)
+                           ^
+                            {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:369:28: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:370:21: note: FIX-IT applied suggested code changes
+        plik << "-";
+                    ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:379:20: warning: 70 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
+    for(int i=0; i<70; i++)
+                   ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:379:20: warning: 70 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:379:28: warning: statement should be inside braces [google-readability-braces-around-statements]
+    for(int i=0; i<70; i++)
+                           ^
+                            {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:379:28: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:380:22: note: FIX-IT applied suggested code changes
+        plik1 << "-";
+                     ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:379:28: warning: statement should be inside braces [hicpp-braces-around-statements]
+    for(int i=0; i<70; i++)
+                           ^
+                            {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:379:28: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:380:22: note: FIX-IT applied suggested code changes
+        plik1 << "-";
+                     ^
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:379:28: warning: statement should be inside braces [readability-braces-around-statements]
+    for(int i=0; i<70; i++)
+                           ^
+                            {
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:379:28: note: FIX-IT applied suggested code changes
+/home/warzkos/Documents/nokia_clang/sys_op.cpp:380:22: note: FIX-IT applied suggested code changes
+        plik1 << "-";
+                     ^
